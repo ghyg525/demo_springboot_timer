@@ -1,0 +1,17 @@
+#邮件服务配置
+mail: 
+  from: #发件人
+    host: smtp.163.com
+    port: 25
+    username: 
+    password: 
+  tos: #收件人列表
+    ghyg525@qq.com,
+    ghyg525@163.com
+
+
+#日志配置
+logging:
+  level:
+    org:
+      springframework: info
