@@ -34,7 +34,7 @@ public class MailUtil {
 	 * @param text 邮件内容
 	 * 注意主线程结束后线程池中任务不会继续执行
 	 */
-	@Async // 此注解表示方法异步执行, 在本类中调用无效, spring会生成动态代理类完成异步调用
+	@Async // 此注解表示方法异步执行, 在同一个类中调用无效, 因为spring会生成动态代理类完成异步调用
 	public void sendMail(String subject, String text){
 		SimpleMailMessage mailMessage = new SimpleMailMessage(); 
 		mailMessage.setFrom(javaMailSender.getUsername());
